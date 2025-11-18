@@ -1,22 +1,63 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Dr. Gerard A. Otiniano</title>
+    <title>Dr. Gerard Otiniano</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+      }
+
+      /* Container for image + about section */
+      .intro-container {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      /* Resize the portrait image */
+      .portrait {
+        width: 180px;
+        border-radius: 8px;
+      }
+
+      h1 {
+        margin-top: 40px;
+      }
+    </style>
+
   </head>
+
   <body>
-    <h1>About</h1>
+
+    <h1>Dr. Gerard Otiniano</h1>
+
+    <!-- IMAGE + ABOUT SIDE BY SIDE -->
+    <div class="intro-container">
+      <img src="me.jpeg" alt="Gerard Otiniano" class="portrait">
+
+      <div>
+        <h2>About</h2>
         <p>Postdoctoral Associate, SUNY University at Buffalo</p>
         <p>Member of <a href="https://www.glyfac.buffalo.edu/Faculty/ekthomas/lab.html" target="_blank"> OSIBL </a>
         <p>High latitude paleoclimatology and proxy devvelopment</p>
+        <p>High-latitude paleoclimatology and proxy development</p>
+      </div>
+    </div>
+
+    <!-- PROJECTS BELOW PICTURE (LEFT-ALIGNED) -->
+    <h2>Projects</h2>
     <p>
       <a href="https://github.com/GerardOtiniano/chromatoPy" target="_blank">
-        chromatoPy
-      </a> (in review)
+        chromatoPy (in review)
+      </a>
     </p>
     <p>
       <a href="https://github.com/gerardotiniano/pysotope" target="_blank">
         Pysotope
       </a>
     </p>
+
   </body>
 </html>

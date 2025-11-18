@@ -10,19 +10,16 @@
         margin: 40px;
       }
 
-      /* Container for image + about section */
       .intro-container {
         display: flex;
-        align-items: stretch;        /* make both elements equal height */
+        align-items: flex-start;   /
         gap: 20px;
       }
 
-      /* Portrait image scales to match the height of the text block */
       .portrait {
-        height: 100%;               /* match height of text container */
-        width: auto;                /* maintain aspect ratio */
+        width: 180px;             
+        height: auto;
         border-radius: 8px;
-        object-fit: cover;          /* keeps image clean if slight mismatch */
       }
 
       h1 {
@@ -43,13 +40,18 @@
       <div>
         <h2>About</h2>
         <p>Postdoctoral Associate, SUNY University at Buffalo</p>
-        <p>Member of <a href="https://www.glyfac.buffalo.edu/Faculty/ekthomas/lab.html">OSIBL</a></p>
+        <p>
+          Member of 
+          <a href="https://www.glyfac.buffalo.edu/Faculty/ekthomas/lab.html">
+            OSIBL
+          </a>
+        </p>
         <p>High-latitude paleoclimatology and proxy development</p>
 
         <h2>Projects</h2>
         <p>
           <a href="https://github.com/GerardOtiniano/chromatoPy">
-            chromatoPy 
+            chromatoPy
           </a> (manuscript in review)
         </p>
         <p>

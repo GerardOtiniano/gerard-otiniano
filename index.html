@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>Dr. Gerard Otiniano</title>
 
-    <style>
+    <!-- <style>
       body {
         font-family: Arial, sans-serif;
         margin: 40px;
@@ -25,6 +25,67 @@
 
       h1 {
         margin-top: 40px;
+      }
+    </style> -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+      }
+
+      .intro-container {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .portrait {
+        width: 180px;
+        border-radius: 8px;
+      }
+
+      h1 {
+        margin-top: 40px;
+      }
+
+      .project-link {
+        margin-bottom: 0.4rem;
+      }
+
+      .download-card {
+        max-width: 720px;
+        margin-left: 15px;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+      }
+
+      .download-card p {
+        margin: 0.4rem 0;
+      }
+
+      .install-note {
+        color: #444;
+      }
+
+      .terminal-command {
+        margin: 0.5rem 0 0 0;
+        padding: 0.85rem 1rem;
+        border-radius: 8px;
+        background: #f5f5f5;
+        border: 1px solid #ddd;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+        font-size: 0.9rem;
+        white-space: pre-wrap;
+        word-break: break-word;
+        overflow-x: auto;
+      }
+
+      .terminal-command code {
+        font-family: inherit;
+      }
+
+      .indented-link {
+        margin-left: 15px;
       }
     </style>
   </head>
@@ -47,7 +108,7 @@
         </p>
         <p>High-latitude paleoclimatology and proxy development</p>
 
-        <h2>Projects</h2>
+        <!-- <h2>Projects</h2>
         <p>
           <a href="https://github.com/GerardOtiniano/chromatoPy">
             chromatoPy
@@ -58,14 +119,14 @@
             Download chromatoPy app for MacOS (ARM)
           </a>
         </p> -->
-        <div class="download-card">
-          <p>
+        <!-- <div class="download-card">
+          <p style="text-indent: 15px;">
             <a href="https://github.com/GerardOtiniano/chromatoPy_App/releases/download/v0.1.0/chromatoPy-desktop-macos-apple-silicon.dmg" download>
               Download chromatoPy app for macOS (ARM)
             </a>
           </p>
 
-          <p class="install-note">
+          <p style="text-indent: 15px;" class="install-note">
             <strong>note:</strong> If macOS says the app is damaged, move chromatoPy to the Applications folder, then run this command in Terminal:
           </p>
 
@@ -85,6 +146,45 @@
         </p>
         <p>
           <a href="manuscripts.html"> List of peer-reviewed work </a>
+        </p> -->
+        <h2>Projects</h2>
+
+        <p class="project-link">
+          <a href="https://github.com/GerardOtiniano/chromatoPy">
+            chromatoPy
+          </a>
+        </p>
+
+        <div class="download-card">
+          <p>
+            <a href="https://github.com/GerardOtiniano/chromatoPy_App/releases/download/v0.1.0/chromatoPy-desktop-macos-apple-silicon.dmg" download>
+              Download chromatoPy app for macOS (ARM)
+            </a>
+          </p>
+
+          <p class="install-note">
+            <strong>macOS note:</strong> If macOS says the app is damaged, move chromatoPy to the Applications folder, then run this command in Terminal:
+          </p>
+
+          <pre class="terminal-command"><code>xattr -dr com.apple.quarantine /Applications/chromatoPy-desktop.app</code></pre>
+        </div>
+
+        <p class="indented-link">
+          <a href="https://github.com/GerardOtiniano/chromatoPy_App/releases/download/v0.1.0/chromatoPy-desktop-windows.zip" download>
+            Download chromatoPy app for Windows
+          </a>
+        </p>
+
+        <p>
+          <a href="https://github.com/gerardotiniano/pysotope">pysotope</a>
+        </p>
+
+        <p>
+          <a href="TopSecret.html">Top secret (make invisible)</a>
+        </p>
+
+        <p>
+          <a href="manuscripts.html">List of peer-reviewed work</a>
         </p>
       </div>
     </div>

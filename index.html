@@ -4,29 +4,6 @@
     <meta charset="UTF-8" />
     <title>Dr. Gerard Otiniano</title>
 
-    <!-- <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 40px;
-      }
-
-      /* Container for image + about section */
-      .intro-container {
-        display: flex;
-        align-items: flex-start;
-        gap: 20px;
-      }
-
-      /* Resize the portrait image */
-      .portrait {
-        width: 180px;
-        border-radius: 8px;
-      }
-
-      h1 {
-        margin-top: 40px;
-      }
-    </style> -->
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -93,7 +70,6 @@
   <body>
     <h1>Dr. Gerard Otiniano</h1>
 
-    <!-- IMAGE + ABOUT SIDE BY SIDE -->
     <div class="intro-container">
       <img src="figures/me.jpeg" alt="Gerard Otiniano" class="portrait" />
 
@@ -107,46 +83,6 @@
           </a>
         </p>
         <p>High-latitude paleoclimatology and proxy development</p>
-
-        <!-- <h2>Projects</h2>
-        <p>
-          <a href="https://github.com/GerardOtiniano/chromatoPy">
-            chromatoPy
-          </a>
-        <!-- <p> -->
-        <!-- <p style="text-indent: 15px;">
-          <a href="https://github.com/GerardOtiniano/chromatoPy_App/releases/download/v0.1.0/chromatoPy-desktop-macos-apple-silicon.dmg" download>
-            Download chromatoPy app for MacOS (ARM)
-          </a>
-        </p> -->
-        <!-- <div class="download-card">
-          <p style="text-indent: 15px;">
-            <a href="https://github.com/GerardOtiniano/chromatoPy_App/releases/download/v0.1.0/chromatoPy-desktop-macos-apple-silicon.dmg" download>
-              Download chromatoPy app for macOS (ARM)
-            </a>
-          </p>
-
-          <p style="text-indent: 15px;" class="install-note">
-            <strong>note:</strong> If macOS says the app is damaged, move chromatoPy to the Applications folder, then run this command in Terminal:
-          </p>
-
-          <pre class="terminal-command"><code>xattr -dr com.apple.quarantine /Applications/chromatoPy-desktop.app</code></pre>
-        </div>
-
-        <p style="text-indent: 15px;">
-          <a href="https://github.com/GerardOtiniano/chromatoPy_App/releases/download/v0.1.0/chromatoPy-desktop-windows.zip" download>
-            Download chromatoPy app for Windows
-          </a>
-        </p>
-        <p>
-          <a href="https://github.com/gerardotiniano/pysotope"> Pysotope </a>
-        </p>
-        <p>
-          <a href="TopSecret.html"> Top secret (make invisible) </a>
-        </p>
-        <p>
-          <a href="manuscripts.html"> List of peer-reviewed work </a>
-        </p> -->
         <h2>Projects</h2>
 
         <p class="project-link">
@@ -157,8 +93,8 @@
 
         <div class="download-card">
           <p>
-            <a href="https://github.com/GerardOtiniano/chromatoPy_App/releases/download/v0.1.0/chromatoPy-desktop-macos-apple-silicon.dmg" download>
-              Download chromatoPy app for macOS (ARM)
+            <a href="https://github.com/GerardOtiniano/chromatoPy_App/releases/latest/download/chromatoPy-desktop-macos-apple-silicon.dmg" download>
+                        Download chromatoPy app for macOS (ARM) (<span class="chromatopy-version">latest version</span>)
             </a>
           </p>
 
@@ -170,8 +106,8 @@
         </div>
 
         <p class="indented-link">
-          <a href="https://github.com/GerardOtiniano/chromatoPy_App/releases/download/v0.1.0/chromatoPy-desktop-windows.zip" download>
-            Download chromatoPy app for Windows
+          <a href="https://github.com/GerardOtiniano/chromatoPy_App/releases/latest/download/chromatoPy-desktop-windows.zip" download>
+            Download chromatoPy app for Windows (<span class="chromatopy-version">latest version</span>)
           </a>
         </p>
 
@@ -188,5 +124,19 @@
         </p>
       </div>
     </div>
+    <script>
+      fetch("https://api.github.com/repos/GerardOtiniano/chromatoPy_App/releases/latest")
+        .then(response => response.json())
+        .then(data => {
+          document.querySelectorAll(".chromatopy-version").forEach(element => {
+            element.textContent = data.tag_name;
+          });
+        })
+        .catch(() => {
+          document.querySelectorAll(".chromatopy-version").forEach(element => {
+            element.textContent = "latest release";
+          });
+        });
+    </script>
   </body>
 </html>

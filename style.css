@@ -65,8 +65,9 @@ h2 {
 }
 
 .portrait {
-  width: 250px;
-  border-radius: 8px;
+	border: 2px solid#E1CDB5;
+   width: 250px;
+   border-radius: 10px;
 }
 
 .about-text h2 {

@@ -2,6 +2,7 @@
   --background-blue: #2F4858;
   /* --font-cream: #EDDEA4; */
   --font-cream: #E1CDB5;
+  --font-link :#FF4000;
 }
 
 body {
@@ -161,8 +162,11 @@ h2 {
   }
 }
 
-a {
+/* a {
   color: var(--font-cream);
+} */
+a {
+	color: var(--font-link)
 }
 
 a:hover {

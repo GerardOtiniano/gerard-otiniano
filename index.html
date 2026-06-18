@@ -1,142 +1,241 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Dr. Gerard Otiniano</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Gerard Otiniano</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 40px;
-      }
+<body>
 
-      .intro-container {
-        display: flex;
-        align-items: flex-start;
-        gap: 20px;
-      }
-
-      .portrait {
-        width: 180px;
-        border-radius: 8px;
-      }
-
-      h1 {
-        margin-top: 40px;
-      }
-
-      .project-link {
-        margin-bottom: 0.4rem;
-      }
-
-      .download-card {
-        max-width: 720px;
-        margin-left: 15px;
-        margin-bottom: 1rem;
-        line-height: 1.5;
-      }
-
-      .download-card p {
-        margin: 0.4rem 0;
-      }
-
-      .install-note {
-        color: #444;
-      }
-
-      .terminal-command {
-        margin: 0.5rem 0 0 0;
-        padding: 0.85rem 1rem;
-        border-radius: 8px;
-        background: #f5f5f5;
-        border: 1px solid #ddd;
-        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-        font-size: 0.9rem;
-        white-space: pre-wrap;
-        word-break: break-word;
-        overflow-x: auto;
-      }
-
-      .terminal-command code {
-        font-family: inherit;
-      }
-
-      .indented-link {
-        margin-left: 15px;
-      }
-    </style>
-  </head>
-
-  <body>
+  <header>
     <h1>Dr. Gerard Otiniano</h1>
+    <p>Paleoclimatologist · Arctic Climate Change · Biomarker Proxies</p>
+    <p class="profile-links">
+       <a
+         href="https://orcid.org/0000-0002-4646-2687"
+         target="_blank"
+         rel="me noopener noreferrer"
+         aria-label="ORCID profile">
+         <img
+           src="figures/orcid.png"
+           class="profile-icon"
+           alt="ORCID iD icon"/></a>
 
-    <div class="intro-container">
-      <img src="figures/me.jpeg" alt="Gerard Otiniano" class="portrait" />
+       <a
+         href="https://github.com/GerardOtiniano"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="GitHub profile">
+         <img
+           src="figures/github.png"
+           class="profile-icon"
+           alt="GitHub icon"/></a>
+    </p>
+  </header>
 
-      <div>
-        <h2>About</h2>
-        <p>Postdoctoral Associate, SUNY University at Buffalo</p>
-        <p>
-          Member of
-          <a href="https://www.glyfac.buffalo.edu/Faculty/ekthomas/lab.html">
-            OSIBL
-          </a>
-        </p>
-        <p>High-latitude paleoclimatology and proxy development</p>
-        <h2>Projects</h2>
-
-        <p class="project-link">
-          <a href="https://github.com/GerardOtiniano/chromatoPy">
-            chromatoPy
-          </a>
-        </p>
-
-        <div class="download-card">
-          <p>
-            <a href="https://github.com/GerardOtiniano/chromatoPy_App/releases/latest/download/chromatoPy-desktop-macos-apple-silicon.dmg" download>
-                        Download chromatoPy app for macOS (ARM) (<span class="chromatopy-version">latest version</span>)
-            </a>
-          </p>
-
-          <p class="install-note">
-            <strong>macOS note:</strong> If macOS says the app is damaged, move chromatoPy to the Applications folder, then run this command in Terminal:
-          </p>
-
-          <pre class="terminal-command"><code>xattr -dr com.apple.quarantine /Applications/chromatoPy-desktop.app</code></pre>
-        </div>
-
-        <p class="indented-link">
-          <a href="https://github.com/GerardOtiniano/chromatoPy_App/releases/latest/download/chromatoPy-desktop-windows.zip" download>
-            Download chromatoPy app for Windows (<span class="chromatopy-version">latest version</span>)
-          </a>
-        </p>
-
-        <p>
-          <a href="https://github.com/gerardotiniano/pysotope">pysotope</a>
-        </p>
-
-        <p>
-          <a href="TopSecret.html">Top secret (make invisible)</a>
-        </p>
-
-        <p>
-          <a href="manuscripts.html">List of peer-reviewed work</a>
-        </p>
-      </div>
+  <main>
+    <div class="tabs">
+      <button class="tab-button active" data-tab="about">About</button>
+      <button class="tab-button" data-tab="comp_tools">Computational Tools</button>
+      <button class="tab-button" data-tab="pubs">Publications</button>
     </div>
-    <script>
-      fetch("https://api.github.com/repos/GerardOtiniano/chromatoPy_App/releases/latest")
-        .then(response => response.json())
-        .then(data => {
-          document.querySelectorAll(".chromatopy-version").forEach(element => {
-            element.textContent = data.tag_name;
-          });
-        })
-        .catch(() => {
-          document.querySelectorAll(".chromatopy-version").forEach(element => {
-            element.textContent = "latest release";
-          });
+
+    <section class="tab-content active" id="about">
+      <div class="intro-container">
+        <img src="figures/me.jpeg" alt="Gerard Otiniano" class="portrait" />
+      <div class="about-text">
+        <h2>Current</h2>
+          <p> I am a paleoclimatologist interested in Arctic climate change, biomarker proxies, and Holocene climate variability.</p>
+          <p>Currently, I am Postdoc in the Organic Stable Isotope Lab (OSIBL) at UB, under the supervision of Dr. Elizabeth Thomas.</p>
+          <p>In September 2026, I will be joining the lab group of Dr. Anne de Vernal at UQAM as a Postdoc, funded through a NSERC Impact+ Postdoctoral grant.</p>
+
+        <h2>Education</h2>
+          <p>PhD - University of Toronto (<em>Graduated 2023</em>)</p>
+          <p>MSc - University of Toronto (<em>Graduated 2018</em>)</p>
+          <p>BSc - University of Alberta (<em>Graduated 2016</em>)</p>
+    </section>
+
+    <section class="tab-content" id="comp_tools">
+      <div class="tool-entry chromatopy-entry">
+        <img
+          src="figures/chromatopy_simple.png"
+          alt="chromatoPy interface"
+          class="tool-figure"/>
+        <div class="tool-text">
+          <h2>chromatoPy</h2>
+          <p>
+            chromatoPy(Otiniano et al., 2025), is a peak integration toolthat enables rapid quantification of compounds measured via chromatography.</p>
+          <ul>
+            <li>Tutorials (<em>coming soon</em>)</li>
+
+            <li>
+              GitHub repo for chromatoPy <a href="https://github.com/GerardOtiniano/chromatoPy">python package (<span class="chromatopy-pkg-version">latest version</span>)</a></li>
+
+            <li>
+              Download chromatoPy app for<a href="https://github.com/GerardOtiniano/chromatoPy_App/releases/latest/download/chromatoPy-desktop-macos-apple-silicon.dmg" download>
+                macOS (ARM) (<span class="chromatopy-app-version">latest version</span>)</a></li>
+
+            <li>
+              Download chromatoPy app for<a href="https://github.com/GerardOtiniano/chromatoPy_App/releases/latest/download/chromatoPy-desktop-windows.zip" download>
+              Windows (<span class="chromatopy-app-version">latest version</span>)</a></li>
+
+          </ul>
+          <div class="install-note">
+              <p>
+                <strong>macOS install note:</strong> After downloading the DMG, open it and drag
+                <strong>chromatoPy-desktop.app</strong> into your <strong>Applications</strong>
+                folder. Then open Terminal and run:
+              </p>
+              <code>
+                xattr -dr com.apple.quarantine /Applications/chromatoPy-desktop.app
+              </code>
+            </div>
+          </div>
+      </div>
+
+     <div class="tool-entry pysotope-entry">
+
+       <div class="tool-text">
+         <p>
+           <h2>Pysotope</h2>
+           <strong>pysotope</strong> is a python package for processing isotopic data measured via GC-IRMS
+           (&delta;<sup>2</sup>H, &delta;<sup>13</sup>C) and EA
+           (&delta;<sup>13</sup>C, &delta;<sup>15</sup>N). Corrections for drift (time), linearity (amount), methanol (for FAME derivatization), and reference standards (e.g., VSMOW). We incorporate a number of methods for identifying coherent trends in measurement standards, enabling accurate isotopic measurements even at low concentrations.</p>
+         <ul>
+           <li>
+             GitHub repository for
+             <a href="https://github.com/gerardotiniano/pysotope">
+               pysotope package (<span class="pysotope-pkg-version">latest version</span>)
+             </a>
+           </li>
+         </ul>
+       </div>
+
+       <img src="figures/pysotope.png"
+        alt="pysotope workflow"
+        class="tool-figure"/>
+     </div>
+    </section>
+
+    <section class="tab-content" id="pubs">
+      <h2>In Review</h2>
+      <p>Topness, R. G., Thomas, E. K., Fendrock, M., and <strong>Otiniano, G. A.</strong>: Calibration guidelines and a runoff-isotope module for lake proxy system modeling (PRYSM v2.0), EGUsphere, 1–31, https://doi.org/10.5194/egusphere-2026-2322, 2026. <a href="papers/Topness2026.pdf" target="_blank"> (PreprintPDF)</a>
+      </p>
+
+      <h2>Peer-Reviewed</h2>
+      <p>
+        <strong>Otiniano, G. A.</strong>, Thomas, E. K., Castañeda, I. S.,
+        Acharya, S., Sharma, Y., Mark, S. Z. (2025). chromatoPy: An open-source
+        tool for chromatographic peak deconvolution and integration applied to
+        glycerol dialkyl glycerol tetraethers. Paleoceanography and
+        Paleoclimatology, 40 , e2025PA005316. https://doi.org/10.1029/2025PA005316
+        <a href="papers/Otiniano2025.pdf" target="_blank"> (PDF)</a>
+      </p>
+
+      <p>
+        Trasune, L., Orozco, L. E., Salonen, J. S.,
+        <strong>Otiniano, G. A.</strong>, Porter, T. J., Weckström, J., et al.
+        (2026). A comparison of Holocene temperature reconstructions from
+        vegetation proxies and brGDGTs in northern Fennoscandia. Quaternary
+        Science Reviews, 372, 109727.
+        https://doi.org/10.1016/j.quascirev.2025.109727.
+        <a href="papers/Trasune2026.pdf" target="_blank"> (PDF)</a>
+      </p>
+
+      <p>
+        <strong>Otiniano, G. A.</strong>, Porter, T. J., Phillips, M. A.,
+        Juutinen, S., Weckström, J. B., & Heikkilä, M. P. (2024). Reconstructing
+        warm-season temperatures using brGDGTs and assessing biases in Holocene
+        temperature records in northern Fennoscandia. Quaternary Science Reviews,
+        329, 108555. <a href="papers/Otiniano2024.pdf" target="_blank"> (PDF)</a>
+      </p>
+      <p>
+        <strong>Otiniano, G. A.</strong>, Porter, T. J., Buceta, R. E., Bergman,
+        M. E., & Phillips, M. A. (2023). Climatic and environmentally driven
+        variability in lacustrine brGDGT distributions at local to regional scales
+        in Alaska and northwestern Canada. Organic Geochemistry, 181, 104604.
+        https://doi.org/10.1016/j.orggeochem.2023.104604
+        <a href="papers/Otiniano2023.pdf" target="_blank"> (PDF)</a>
+      </p>
+      <p>
+        <strong>Otiniano, G. A.</strong>, Porter, T. J., Benowitz, J. A.,
+        Bindeman, I. N., Froese, D. G., Jensen, B. J. L., et al. (2020). A Late
+        Miocene to Late Pleistocene Reconstruction of Precipitation Isotopes and
+        Climate From Hydrated Volcanic Glass Shards and Biomarkers in Central
+        Alaska and Yukon. Paleoceanography and Paleoclimatology, 35(7),
+        e2019PA003791. https://doi.org/10.1029/2019PA003791
+        <a href="papers/Otiniano2020.pdf" target="_blank"> (PDF)</a>
+      </p>
+    </section>
+
+  </main>
+
+  <script>
+    const tabButtons = document.querySelectorAll(".tab-button");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    tabButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const targetTab = button.dataset.tab;
+
+        tabButtons.forEach(btn => {
+          btn.classList.remove("active");
         });
-    </script>
-  </body>
+
+        tabContents.forEach(content => {
+          content.classList.remove("active");
+        });
+
+        button.classList.add("active");
+        document.getElementById(targetTab).classList.add("active");
+      });
+    });
+  </script>
+  <script>
+    fetch("https://api.github.com/repos/GerardOtiniano/chromatoPy_App/releases/latest")
+      .then(response => response.json())
+      .then(data => {
+       document.querySelectorAll(".chromatopy-app-version").forEach(element => {
+        element.textContent = data.tag_name;
+       });
+      })
+      .catch(() => {
+       document.querySelectorAll(".chromatopy-app-version").forEach(element => {
+        element.textContent = "latest release";
+       });
+      });
+   </script>
+
+  <script>
+    fetch("https://api.github.com/repos/GerardOtiniano/chromatoPy/releases/latest")
+      .then(response => response.json())
+      .then(data => {
+       document.querySelectorAll(".chromatopy-pkg-version").forEach(element => {
+        element.textContent = data.tag_name;
+       });
+      })
+      .catch(() => {
+       document.querySelectorAll(".chromatopy-pkg-version").forEach(element => {
+        element.textContent = "latest release";
+       });
+      });
+   </script>
+
+  <script>
+    fetch("https://api.github.com/repos/GerardOtiniano/pysotope/releases/latest")
+      .then(response => response.json())
+      .then(data => {
+       document.querySelectorAll(".pysotope-pkg-version").forEach(element => {
+        element.textContent = data.tag_name;
+       });
+      })
+      .catch(() => {
+       document.querySelectorAll(".pysotope-pkg-version").forEach(element => {
+        element.textContent = "latest release";
+       });
+      });
+   </script>
+</body>
 </html>

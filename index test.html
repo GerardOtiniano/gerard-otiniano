@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Gerard Otiniano</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Dr. Gerard Otiniano</h1>
+    <p>Paleoclimatologist · Arctic Climate Change · Biomarker Proxies</p>
+    <p class="profile-links">
+       <a
+         href="https://orcid.org/0000-0002-4646-2687"
+         target="_blank"
+         rel="me noopener noreferrer"
+         aria-label="ORCID profile">
+         <img
+           src="figures/orcid.png"
+           class="profile-icon"
+           alt="ORCID iD icon"/></a>
+       <a
+         href="https://github.com/GerardOtiniano"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="GitHub profile">
+         <img
+           src="figures/github.png"
+           class="profile-icon"
+           alt="GitHub icon"/></a>
+    </p>
+  </header>
+  <main>
+    <div class="tabs">
+      <button class="tab-button active" data-tab="about">About</button>
+      <button class="tab-button" data-tab="comp_tools">Computational Tools</button>
+      <button class="tab-button" data-tab="pubs">Publications</button>
+    </div>
+    <section class="tab-content active" id="about">
+      <div class="intro-container">
+        <img src="figures/me.jpeg" alt="Gerard Otiniano" class="portrait" />
+      <div class="about-text">
+        <h2>Current</h2>
+          <p> I am a paleoclimatologist interested in Arctic climate change, biomarker proxies, and climate variability. Currently, I am a postdoctoral researcher at the Université du Québec à Montréal, working with Dr. Anne de Vernal.</p>
+	<h2>Previous Employment</h2>
+	  <p>Postdoctoral Researcher with Dr. Elizabeth Thomas - University at Buffalo (2023-2026) </p>
+        <h2>Education</h2>
+          <p>PhD - University of Toronto (<em>Graduated 2023</em>)</p>
+          <p>MSc - University of Toronto (<em>Graduated 2018</em>)</p>
+          <p>BSc - University of Alberta (<em>Graduated 2016</em>)</p>
+    </section>
+    <section class="tab-content" id="comp_tools">
+      <div class="tool-entry chromatopy-entry">
+        <img
+          src="figures/chromatopy_simple.png"
+          alt="chromatoPy interface"
+          class="tool-figure"/>
+        <div class="tool-text">
+          <h2>chromatoPy</h2>
+          <p>
+            chromatoPy <a href="papers/Otiniano2025.pdf" target="_blank"> (Otiniano et al., 2025)</a>, is a peak integration tool that enables rapid quantification of compounds measured via chromatography.</p>
+          <ul>
+            <li>Tutorials (<em>coming soon</em>)</li>
+            <li>
+              GitHub repo for chromatoPy <a href="https://github.com/GerardOtiniano/chromatoPy">python package (<span class="chromatopy-pkg-version">latest version</span>)</a></li>
+            <li>
+              Download chromatoPy app for <a href="https://github.com/GerardOtiniano/chromatoPy_App/releases/latest/download/chromatoPy-desktop-macos-apple-silicon.dmg" download> macOS (ARM) (<span class="chromatopy-app-version">latest version</span>)</a></li>
+            <li>
+              Download chromatoPy app for <a href="https://github.com/GerardOtiniano/chromatoPy_App/releases/latest/download/chromatoPy-desktop-windows.zip" download> Windows (<span class="chromatopy-app-version">latest version</span>)</a></li>
+          </ul>
+          <div class="install-note">
+              <p>
+                <strong>macOS install note:</strong> After downloading the DMG, open it and drag
+                <strong>chromatoPy-desktop.app</strong> into your <strong>Applications</strong>
+                folder. Then open Terminal and run:
+              </p>
+              <code>
+                xattr -dr com.apple.quarantine /Applications/chromatoPy-desktop.app
+              </code>
+            </div>
+          </div>
+      </div>
+     <div class="tool-entry pysotope-entry">
+       <div class="tool-text">
+         <p>
+           <h2>Pysotope</h2>
+           <strong>pysotope</strong> is a python package for processing isotopic data measured via GC-IRMS
+           (&delta;<sup>2</sup>H, &delta;<sup>13</sup>C) and EA
+           (&delta;<sup>13</sup>C, &delta;<sup>15</sup>N). Corrections for drift (time), linearity (amount), methanol (for FAME derivatization), and reference standards (e.g., VSMOW). We incorporate a number of methods for identifying coherent trends in measurement standards, enabling accurate isotopic measurements even at low concentrations.</p>
+         <ul>
+           <li>
+             GitHub repository for
+             <a href="https://github.com/gerardotiniano/pysotope">
+               pysotope package (<span class="pysotope-pkg-version">latest version</span>)
+             </a>
+           </li>
+         </ul>
+       </div>
+       <img src="figures/pysotope.png"
+        alt="pysotope workflow"
+        class="tool-figure"/>
+     </div>
+    </section>
+    <!-- Publications -->
+    <section class="tab-content" id="pubs">
+      <h2>In Review</h2>
+      <div id="in-review-publications"></div>
+      <h2>Peer-Reviewed</h2>
+      <div id="peer-reviewed-publications"></div>
+    </section>
+    <!-- <section class="tab-content" id="pubs">
+      <h2>In Review</h2>
+      <p> Mark, S. Z., Prince, K. K., Walcott-George, C. K., Briner, J. P., Jensen, B. J., Topness, R. G., <strong>Otiniano, G. A.</strong>, Thomas, E. K. (2026) Late Pleistocene and Holocene North Pacific Climate Dynamics from a Paleoenvironmental Record, Parrot Lake, Dall Island, Alaska [Submitted to Paleoceanography & Paleoclimatology] </p>
+      <p> Samuel Z. Mark, Benjamin V. Gaglioti, Elizabeth K. Thomas, Daniel H. Mann, <strong>Gerard A. Otiniano</strong>, Christopher L. Hancock, Nicholas P. McKay (2026) Evidence from the last deglaciation reveals constraints on the permafrost-carbon feedback [Submitted to AGU Advances] </p>
+      <p>Joshua K. Cuzzone, Jason P. Briner, <strong>Gerard A. Otiniano</strong>, Olivia Truax, Elizabeth K. Thomas, Eric J. Steig, Gregory J. Hakim, Joseph P. Tulenko, Mathieu Morlighem, Nicole-Jeanne Schlegel, Sophie Nowicki, Sudip Acharya, Jacob Anderson, Lambert Caron, Anne de Vernal, Jacob Downs, Émilie Folie-Boivin, Ryan M. Fleetwood, Kyeore Han, Jesse Johnson, Eric Larour, Ana Carolina Luzardi, Zilu Meng, Karlee Prince, Joerg Schaefer, Margie Turin, Liza Wilson, Xiner Wu, Nicolás E. Young (2026) On current climate trajectory, Greenland melt will exceed the Holocene maximum by 2300 [Submitted to Nature Communications] <a href="papers/Cuzzone2026.pdf" target="_blank"> (Preprint PDF)</a> </p>
+      <p>Topness, R. G., Thomas, E. K., Fendrock, M., and <strong>Otiniano, G. A.</strong> (2026) Calibration guidelines and a runoff-isotope module for lake proxy system modeling (PRYSM v2.0), EGUsphere, 1–31 [Submitted to Climate of the Past] https://doi.org/10.5194/egusphere-2026-2322. <a href="papers/Topness2026.pdf" target="_blank"> (Preprint PDF)</a>
+      </p>
+      <h2>Peer-Reviewed</h2>
+      <p>
+        <strong>Otiniano, G. A.</strong>, Thomas, E. K., Castañeda, I. S.,
+        Acharya, S., Sharma, Y., Mark, S. Z. (2025). chromatoPy: An open-source
+        tool for chromatographic peak deconvolution and integration applied to
+        glycerol dialkyl glycerol tetraethers. Paleoceanography and
+        Paleoclimatology, 40 , e2025PA005316. https://doi.org/10.1029/2025PA005316
+        <a href="papers/Otiniano2025.pdf" target="_blank"> (PDF)</a>
+      </p>
+      <p>
+        Trasune, L., Orozco, L. E., Salonen, J. S.,
+        <strong>Otiniano, G. A.</strong>, Porter, T. J., Weckström, J., et al.
+        (2026). A comparison of Holocene temperature reconstructions from
+        vegetation proxies and brGDGTs in northern Fennoscandia. Quaternary
+        Science Reviews, 372, 109727.
+        https://doi.org/10.1016/j.quascirev.2025.109727.
+        <a href="papers/Trasune2026.pdf" target="_blank"> (PDF)</a>
+      </p>
+      <p>
+        <strong>Otiniano, G. A.</strong>, Porter, T. J., Phillips, M. A.,
+        Juutinen, S., Weckström, J. B., & Heikkilä, M. P. (2024). Reconstructing
+        warm-season temperatures using brGDGTs and assessing biases in Holocene
+        temperature records in northern Fennoscandia. Quaternary Science Reviews,
+        329, 108555. <a href="papers/Otiniano2024.pdf" target="_blank"> (PDF)</a>
+      </p>
+      <p>
+        <strong>Otiniano, G. A.</strong>, Porter, T. J., Buceta, R. E., Bergman,
+        M. E., & Phillips, M. A. (2023). Climatic and environmentally driven
+        variability in lacustrine brGDGT distributions at local to regional scales
+        in Alaska and northwestern Canada. Organic Geochemistry, 181, 104604.
+        https://doi.org/10.1016/j.orggeochem.2023.104604
+        <a href="papers/Otiniano2023.pdf" target="_blank"> (PDF)</a>
+      </p>
+      <p>
+        <strong>Otiniano, G. A.</strong>, Porter, T. J., Benowitz, J. A.,
+        Bindeman, I. N., Froese, D. G., Jensen, B. J. L., et al. (2020). A Late
+        Miocene to Late Pleistocene Reconstruction of Precipitation Isotopes and
+        Climate From Hydrated Volcanic Glass Shards and Biomarkers in Central
+        Alaska and Yukon. Paleoceanography and Paleoclimatology, 35(7),
+        e2019PA003791. https://doi.org/10.1029/2019PA003791
+        <a href="papers/Otiniano2020.pdf" target="_blank"> (PDF)</a>
+      </p>
+    </section> -->
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@orcid/bibtex-parse-js@0.0.25/bibtexParse.js"></script>
+  <script>
+    function formatAuthor(author) {
+      const myNames = [
+        "Otiniano, Gerard A.",
+        "Otiniano, Gerard",
+        "Gerard A. Otiniano",
+        "Gerard Otiniano"
+      ];
+      let formatted = author;
+      if (author.includes(",")) {
+        const parts = author.split(",");
+        const lastName = parts[0].trim();
+        const firstNames = parts[1].trim();
+        const initials = firstNames
+          .split(/\s+/)
+          .map(name => `${name.charAt(0)}.`)
+          .join(" ");
+        formatted = `${lastName}, ${initials}`;
+      }
+      const isMe =
+        myNames.some(name =>
+          author.toLowerCase() === name.toLowerCase()
+        );
+      if (isMe) {
+        return `<strong>${formatted}</strong>`;
+      }
+      return formatted;
+    }
+    function formatAuthors(authorString) {
+      return authorString
+        .split(/\s+and\s+/)
+        .map(author => formatAuthor(author.trim()))
+        .join(", ");}
+
+    function formatPublication(tags, isInReview) {
+      const authors = formatAuthors(tags.AUTHOR || "");
+      const year = tags.YEAR || "";
+      const title = tags.TITLE || "";
+      const journal = tags.JOURNAL || "";
+      const volume = tags.VOLUME || "";
+      const pages = tags.PAGES || "";
+      const doi = tags.DOI || "";
+      const fileName = tags.FILE_NAME || "";
+      let html = `${authors} (${year}) ${title}.`;
+      if (isInReview) {
+        if (journal) {
+          html += ` [Submitted to <em>${journal}</em>]`;}
+      } else {
+        if (journal) {
+          html += ` <em>${journal}</em>`;}
+        if (volume) {
+          html += `, ${volume}`;}
+        if (pages) {
+          html += `, ${pages}`;}
+        html += ".";}
+      if (doi) {
+        html +=
+          ` <a href="https://doi.org/${doi}" target="_blank">${doi}</a>`;}
+      if (fileName) {
+        const pdfLabel =
+          isInReview ? "Preprint PDF" : "PDF";
+        html +=
+          ` <a href="papers/${fileName}.pdf" target="_blank">(${pdfLabel})</a>`;}
+      return html;}
+    fetch("publications.bib")
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(
+            `Could not load publications.bib: ${response.status}`);}
+        return response.text();})
+      .then(bibtexText => {
+        const publications =
+          bibtexParse.toJSON(bibtexText);
+        const inReviewContainer =
+          document.getElementById(
+            "in-review-publications"
+          );
+        const peerReviewedContainer =
+          document.getElementById(
+            "peer-reviewed-publications"
+          );
+        publications
+          // newest first
+          .sort((a, b) => {
+            const yearA =
+              Number(a.entryTags.YEAR || 0);
+            const yearB =
+              Number(b.entryTags.YEAR || 0);
+            return yearB - yearA;
+          })
+          .forEach(publication => {
+            const tags =
+              publication.entryTags;
+            const keywords =
+              tags.KEYWORDS || "";
+            const isInReview =
+              keywords
+                .split(",")
+                .map(keyword =>
+                  keyword.trim().toLowerCase()
+                )
+                .includes("in_review");
+            const paragraph =
+              document.createElement("p");
+            paragraph.innerHTML =
+              formatPublication(
+                tags,
+                isInReview
+              );
+            if (isInReview) {
+              inReviewContainer
+                .appendChild(paragraph);
+            } else {
+              peerReviewedContainer
+                .appendChild(paragraph);
+            }
+          });
+      })
+      .catch(error => {
+        console.error(
+          "Could not load publications:",
+          error
+        );
+      });
+  </script>
+  <script>
+    const tabButtons = document.querySelectorAll(".tab-button");
+    const tabContents = document.querySelectorAll(".tab-content");
+    tabButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const targetTab = button.dataset.tab;
+        tabButtons.forEach(btn => {
+          btn.classList.remove("active");
+        });
+        tabContents.forEach(content => {
+          content.classList.remove("active");
+        });
+        button.classList.add("active");
+        document.getElementById(targetTab).classList.add("active");
+      });
+    });
+  </script>
+  <script>
+    fetch("https://api.github.com/repos/GerardOtiniano/chromatoPy_App/releases/latest")
+      .then(response => response.json())
+      .then(data => {
+       document.querySelectorAll(".chromatopy-app-version").forEach(element => {
+        element.textContent = data.tag_name;
+       });
+      })
+      .catch(() => {
+       document.querySelectorAll(".chromatopy-app-version").forEach(element => {
+        element.textContent = "latest release";
+       });
+      });
+   </script>
+  <script>
+    fetch("https://api.github.com/repos/GerardOtiniano/chromatoPy/releases/latest")
+      .then(response => response.json())
+      .then(data => {
+       document.querySelectorAll(".chromatopy-pkg-version").forEach(element => {
+        element.textContent = data.tag_name;
+       });
+      })
+      .catch(() => {
+       document.querySelectorAll(".chromatopy-pkg-version").forEach(element => {
+        element.textContent = "latest release";
+       });
+      });
+   </script>
+  <script>
+    fetch("https://api.github.com/repos/GerardOtiniano/pysotope/releases/latest")
+      .then(response => response.json())
+      .then(data => {
+       document.querySelectorAll(".pysotope-pkg-version").forEach(element => {
+        element.textContent = data.tag_name;
+       });
+      })
+      .catch(() => {
+       document.querySelectorAll(".pysotope-pkg-version").forEach(element => {
+        element.textContent = "latest release";
+       });
+      });
+   </script>
+</body>
+</html>
